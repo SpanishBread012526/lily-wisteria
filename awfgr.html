@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gentle Interactive Letter</title>
+<style>
+  body {
+    background-color: #1a1a1a;
+    color: #ffff00;
+    font-family: "Georgia", serif;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    line-height: 1.8;
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  button {
+    background: #ffff00;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 15px 15px 0;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: inherit;
+  }
+  .message {
+    margin-top: 30px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<h1>oh...</h1>
+
+<p>hey,<br>
+u oke?</p>
+
+<button onclick="showMessage('yesResponse')">Yes, I'm oke :)</button>
+<button onclick="showMessage('noResponse')">No.</button>
+
+<div id="yesResponse" class="message" style="display:none;">
+  <p>Are you sure?</p>
+  <button onclick="showMessage('finalYes')">Yeah..</button>
+  <button onclick="showMessage('finalNo')">Actually, maybe not.</button>
+</div>
+
+<div id="noResponse" class="message" style="display:none;">
+  <p>Whatever you’re facing right now, please don’t give up ^^ lets look forwards sa better days oke?<br>
+you can open up if you wan to--only if you want to. ik its bad to jump in somebody's prob but i js wana make sure<br>
+tht u r good. cheer up, lets not skip the bad days because its what makes us stronger:)) don give up ha?😉😊</p>
+</div>
+
+<div id="finalYes" class="message" style="display:none;">
+  <p>I’m glad to hear that:P Remember, I’m always here if u need sombdy to tok to.</p>
+</div>
+
+<div id="finalNo" class="message" style="display:none;">
+  <p>It’s oke to be unsure abt what u feel sometimes. Take your time, and know you’re not alone, bc ur friends are always there for you.<br>
+well maybe some aren't, but i bet there are some who truly care for you. dont hesitate to open up to ur close ones:)).</p>
+</div>
+
+
+<script>
+  function showMessage(id) {
+    // List all message IDs to hide them all first
+    const messages = ['yesResponse', 'noResponse', 'finalYes', 'finalNo'];
+    messages.forEach(msg => {
+      document.getElementById(msg).style.display = 'none';
+    });
+    // Show the selected message
+    document.getElementById(id).style.display = 'block';
+  }
+  
+ {
+      alert("langheyang bohay, miskona si lyn (HAHA) 🌸");
+ 
+}
+
+
+ 
+</script>
+
+</body>
+</html>
