@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interactive Letter</title>
+<style>
+  body {
+    background-color: #1a1a1a;
+    color: #ffff00;
+    font-family: "Georgia", serif;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    line-height: 1.8;
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  button {
+    background: #ffff00;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 15px 30px 0;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: inherit;
+  }
+  .message {
+    margin-top: 30px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<h1>Letter to Botchok</h1>
+
+<p>hey, botchok,</p>
+<p>I honestly am questioning myself how you're doing rn. yk, there are days I really thought I was over you. like I could finally forget everything, move on, and not care anymore yk?</p>
+
+<p>Choose what you want to hear next:</p>
+
+<button onclick="showMessage('message1')">Tell me you miss me</button>
+<button onclick="showMessage('message2')">Tell me you’re okay</button>
+
+<div id="message1" class="message" style="display:none;">
+  <p>I still love you. I still miss you. Over and over again. Maybe some people don’t ever really leave your heart.</p>
+</div>
+
+<div id="message2" class="message" style="display:none;">
+  <p>I hope you’re doing well, even if we’re apart. Your happiness means the world to me.</p>
+</div>
+
+<script>
+  function showMessage(id) {
+    // Hide both messages first
+    document.getElementById('message1').style.display = 'none';
+    document.getElementById('message2').style.display = 'none';
+
+    // Show the selected message
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
