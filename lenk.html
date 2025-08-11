@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>R u ok?</title>
+<style>
+  body {
+    background-color: #1a1a1a;
+    color: #ffff00;
+    font-family: "Georgia", serif;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    line-height: 1.8;
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  button {
+    background: #ffff00;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 15px 15px 0;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: inherit;
+  }
+  .message {
+    margin-top: 30px;
+    font-style: italic;
+  }
+  .music-invite {
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 0.95em;
+  }
+</style>
+</head>
+<body>
+
+<!-- Music Invitation -->
+<p class="music-invite">
+  🌾 If your soul needs a companion, maybe let this song wrap around you:<br>
+  <a href="https://www.youtube.com/watch?v=pftT6MhrtLE" target="_blank" style="color:#ffff00;">
+    "anything" – Adrianne Lenker
+  </a><br>
+  Open it in a new tab and let it hum quietly while we talk.
+</p>
+
+<h1>oh...</h1>
+
+<p>hey,<br>
+u oke?</p>
+
+<button onclick="showMessage('yesResponse')">Yes, I'm oke :)</button>
+<button onclick="showMessage('noResponse')">No.</button>
+
+<!-- YES branch -->
+<div id="yesResponse" class="message" style="display:none;">
+  <p>Are you really sure? Sometimes we say we’re fine when we’re not...</p>
+  <button onclick="showMessage('finalYes')">Yeah, I’m really fine.</button>
+  <button onclick="showMessage('finalNo')">Actually… maybe not.</button>
+</div>
+
+<div id="finalYes" class="message" style="display:none;">
+  <p>Alright, I’m glad to hear that :P  
+  Remember, even on the good days, it’s okay to talk.  
+  Wanna share what made you smile today?</p>
+  <button onclick="showMessage('shareGood')">Sure :)</button>
+  <button onclick="showMessage('noShare')">Nah, I’ll keep it to myself.</button>
+</div>
+
+<div id="shareGood" class="message" style="display:none;">
+  <p>That’s nice to hear! Good vibes are contagious, so thank u for sharing them with me ^^</p>
+</div>
+
+<div id="noShare" class="message" style="display:none;">
+  <p>That’s oke, I respect ur space. Just know that I’m happy for u even without the details :)</p>
+</div>
+
+<!-- NO branch -->
+<div id="noResponse" class="message" style="display:none;">
+  <p>Oh... I’m sorry to hear that.  
+  Do you wanna talk about it?</p>
+  <button onclick="showMessage('talkAboutIt')">Yes, maybe it’ll help.</button>
+  <button onclick="showMessage('dontWannaTalk')">No, not right now.</button>
+</div>
+
+<div id="talkAboutIt" class="message" style="display:none;">
+  <p>I’m here. I may not have all the answers,  
+  but I’ll listen—no judgment.  
+  Remember, what you’re feeling is valid.</p>
+</div>
+
+<div id="dontWannaTalk" class="message" style="display:none;">
+  <p>That’s oke. Take ur time.  
+  Whatever you’re facing right now, please don’t give up ^^  
+  Better days will come, promise.</p>
+</div>
+
+<div id="finalNo" class="message" style="display:none;">
+  <p>It’s oke to be unsure abt what u feel sometimes.  
+  Take your time, and know you’re not alone.  
+  Some friends might not show it, but I bet there’s someone who truly cares for you.</p>
+</div>
+
+<script>
+  function showMessage(id) {
+    const messages = [
+      'yesResponse', 'noResponse',
+      'finalYes', 'finalNo',
+      'shareGood', 'noShare',
+      'talkAboutIt', 'dontWannaTalk'
+    ];
+    messages.forEach(msg => {
+      document.getElementById(msg).style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+  }
+  
+  {
+    alert("this is Gab, miskona si lyn HAHA💔");
+  }
+</script>
+
+</body>
+</html>
