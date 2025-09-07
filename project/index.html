@@ -1,28 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Ahh</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background-color: #1a1a1a;
+      color: #ffff00;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .page-wrapper {
+      max-width: 1200px;
+      width: 100%;
+      border: 3px solid #8B0000;
+      border-radius: 12px;
+      padding: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .layout {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .left-container, .right-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    img.right, img.gif {
+      max-width: 100%;
+      border-radius: 8px;
+      height: auto;
+    }
+
+    .lyrics {
+      font-size: 0.9em;
+      color: #cccc66;
+      line-height: 1.6;
+      opacity: 0.8;
+      text-align: left;
+    }
+
+    .container {
+      background-color: #1a1a1a;
+      color: #ffff00;
+      flex: 2;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      max-width: 700px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .line {
+      border: none;
+      height: 2px;
+      background-color: #8B0000;
+      margin: 20px 0;
+      opacity: 0.5;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #ffff00;
+    }
+
+    h2 { margin-top: 40px; }
+    p { margin-bottom: 20px; }
+
+    .signature {
+      margin-top: 40px;
+      text-align: right;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left-container, .right-container {
+        align-items: center;
+        text-align: center;
+      }
+
+      .lyrics {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="page-wrapper">
+    <div class="layout">
+      
+      <!-- Left Column: Lyrics -->
+      <div class="left-container">
+        <div class="lyrics">
+          i made this. and it's not that i want you back this instance..
+          i know din naman na theres no chance since u already like someone. 
+          plus, i want u to live ur life without the likes of me bothering u, lol.
+          i made this and it sounds like a small conf. dont misunderstand me oke, since life isn't just all about love.
+          and the way i wait for u looks like love is all i do lol ToT. thats why ima just let things go the way they are right now amidst the chaos of waiting for nothing:|
+          i just wanna make you something cool, which is making something using coding.
+        </div>
+      </div>
 
-    <h1>project ahh</h1>
+      <!-- Middle Column: Letters -->
+      <div class="container">
+        <h1>Letters for u, boi. before you read this, jwlyk that these are filled with my feelings...</h1>
 
-    <img src="images/screenshot.jpg" alt="what">
-    <img src="images/heart.gif" alt="literally my stupid heart">
+        <section>
+          <hr class="line">
+          <h2>September 6, 2025</h2>
+          <p>Boi,</p>
+          <p>Congrats on making it to the honor list!! You don’t know how happy I am right now…</p>
+          <p>Even if I didn’t reach that 90 average, knowing you’re there makes me feel like nahonor sad ko…</p>
+          <p>Keep going, boi. Keep chasing your dreams and doing your best. I’ll always be rooting for you from wherever I stand.</p>
+          <p>No matter what, I’ll carry you with me through every step of my life, and idc if it seems stupid. Always.</p>
+          <p class="signature">—Gabby</p>
+        </section>
 
+        <hr class="line">
+
+        <section>
+          <h2>September 1, 2025</h2>
+          <p>Lyn,</p>
+          <p>It’s the 1st of September… you matter more than someone could ever put into words. Even on your worst days, please know you’re more than enough.</p>
+          <p>Every night before I fall asleep, I pray for your happiness, safety, and peace of mind…</p>
+          <p>You’re one of the greatest blessings God has ever given me…</p>
+          <p class="signature">—Gabby</p>
+        </section>
+      </div>
+
+      <!-- Right Column: Images -->
+      <div class="right-container">
+        <img src="images/screenshot.png" alt="Screenshot">
+        <img src="images/heart.gif" alt="Heart GIF">
+        <img src="images/sigma.png" class="right">
+      </div>
+    </div>
+  </div>
 </body>
 </html>
