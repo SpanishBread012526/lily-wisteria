@@ -6,12 +6,25 @@
   <title>project ahh</title>
   <style>
     body {
-      font-family: "Georgia", serif;
-      background-color: #1a1a1a;
-      color: #ffff00;
-      margin: 0;
-      padding: 40px;
-    }
+  margin: 0;
+  padding: 0;
+  background-color: black; /* your background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* full phone screen height */
+}
+
+.border-box {
+  border: 3px solid #cccc66;  /* gold-ish border */
+  border-radius: 20px;        /* rounded corners */
+  padding: 20px;              /* space inside */
+  max-width: 90%;             /* never exceed 90% of screen */
+  width: 100%;                /* fit mobile width */
+  box-sizing: border-box;     /* padding won’t break layout */
+  background: #111;           /* inner box color */
+}
+
 
     .layout {
       display: flex;
@@ -80,7 +93,8 @@
   </style>
 </head>
 <body>
-  <div class="layout">
+<div class="border-box">  
+<div class="layout">
     
     <!-- Left Column: Lyrics -->
     <div class="left-container">
@@ -158,5 +172,6 @@ and the way i wait for u looks like love is all i do lol ToT. thats why ima just
       <img src="C:\Users\user\OneDrive\Pictures\Screenshots\Screenshot 2025-09-07 102717.png" class="right">
     </div>
   </div>
+</div>
 </body>
 </html>
