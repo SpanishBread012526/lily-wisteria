@@ -75,6 +75,11 @@
 .greeting button:hover {
   background:#912c6d;
 }
+.blur {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+    
 
   </style>
 </head>
@@ -130,7 +135,17 @@
 function closeGreeting() {
   document.getElementById("greeting").style.display = "none";
 }
-</script
+</script>
+  <script>
+function closeGreeting() {
+  document.getElementById("greeting").style.display = "none";
+  document.getElementById("letter-container").classList.remove("blur");
+}
+
+window.onload = function() {
+  document.getElementById("letter-container").classList.add("blur");
+}
+</script>
 
 
 </body>
